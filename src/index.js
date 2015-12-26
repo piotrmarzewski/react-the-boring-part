@@ -1,5 +1,4 @@
-import React    from "react";
-import ReactDOM from "react-dom";
-import App      from "app/components/App";
+import "./style.css";
+import pokemon from "./lib/pokemon";
 
-ReactDOM.render(<App />, document.getElementById("root"))
+document.querySelector("#root").textContent = pokemon("Hello World!");

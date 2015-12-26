@@ -3,7 +3,7 @@ var WebpackDevServer = require("webpack-dev-server");
 var config           = require("../webpack/webpack.dev.config");
 
 var webpackDevServer = new WebpackDevServer(webpack(config), {
-  hot: true,
+  hot: false,
   historyApiFallback: true,
   stats: { colors: true },
 });
