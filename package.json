@@ -9,7 +9,8 @@
     "postinstall": "npm run build",
     "build": "webpack --config webpack/webpack.prod.config.js -p",
     "clean": "rm -rf build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start",
+    "test-watch": "karma start --auto-watch --no-single-run"
   },
   "author": "Michał Załęcki <michal@michalzalecki.com>",
   "license": "WTFPL",
@@ -32,6 +33,14 @@
   },
   "devDependencies": {
     "extend": "^3.0.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.18",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-mocha-reporter": "^1.1.5",
+    "karma-notify-reporter": "^0.1.1",
+    "karma-sourcemap-loader": "^0.3.6",
+    "karma-webpack": "^1.7.0",
     "nodemon": "^1.4.1",
     "webpack-dev-server": "^1.10.1"
   }

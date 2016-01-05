@@ -1,3 +1,5 @@
+import "../style.css";
+
 function pokemon(text) {
   return text.toLowerCase()
     .split("")
