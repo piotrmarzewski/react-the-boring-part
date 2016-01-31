@@ -1,13 +1,13 @@
-# EcmaScript 2016+ The Boring Part
+# TypeScript The Boring Part
 
-Setup for all modern JS web apps. It's not going to force you to use any specyfic toolset/framework. Be free and make **your** choice. *EcmaScript 2016+ The Boring Part* is just a setup which allows you to develop and deploy app without pain. It's not a bare minimum, although I tried to keep things simple.
+Setup for all modern TypeScript web apps. It's not going to force you to use any specyfic toolset/framework. Be free and make **your** choice. *EcmaScript 2016+ The Boring Part* is just a setup which allows you to develop and deploy app without pain. It's not a bare minimum, although I tried to keep things simple.
 
 ## Clone
 
 To only clone specyfic branch use `git clone -b {branch-name} {repo}`.
 
 ```
-git clone -b pure-es https://github.com/MichalZalecki/react-the-boring-part
+git clone -b pure-ts https://github.com/MichalZalecki/react-the-boring-part
 ```
 
 ## Scripts
