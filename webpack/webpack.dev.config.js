@@ -3,7 +3,7 @@ var config  = require("./webpack.config.js");
 var extend  = require("extend");
 
 devConfig = {
-  devtool: "eval",
+  devtool: "inline-source-map",
 
   entry: [
     "webpack-dev-server/client?http://localhost:8080",
@@ -21,7 +21,7 @@ devConfig = {
 
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style!css?sourceMap!postcss" },
+      { test: /\.css$/, loader: "style!css?module&sourceMap!postcss" },
     ].concat(config.module.loaders),
   },
 
