@@ -2,6 +2,10 @@
 
 var webpackConfig = require("./webpack/webpack.prod.config.js");
 webpackConfig.devtool = "inline-source-map";
+webpackConfig.module.loaders = [
+  { test: /\.js$/, exclude: [/node_modules/, /\.spec.js$/], loader: "babel-istanbul" },
+  ...webpackConfig.module.loaders,
+];
 
 module.exports = function(config) {
   config.set({
@@ -36,7 +40,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: "dots", "progress"
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ["mocha", "notify"],
+    reporters: ["mocha", "notify", "coverage"],
 
 
     // web server port
@@ -82,6 +86,10 @@ module.exports = function(config) {
     // karma-notify-reporter settings
     notifyReporter: {
       reportEachFailure: true
+    },
+
+    coverageReporter: {
+      type: "text"
     }
   })
 }
