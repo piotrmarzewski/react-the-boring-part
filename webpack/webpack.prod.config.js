@@ -17,7 +17,7 @@ var prodConfig = {
   module: {
     loaders: [
       { test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style", "css?module&sourceMap!postcss"),
+        loader: ExtractTextPlugin.extract("style", "css?sourceMap!postcss"),
       },
     ].concat(config.module.loaders),
   },

@@ -21,7 +21,7 @@ devConfig = {
 
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style!css?module&sourceMap!postcss" },
+      { test: /\.css$/, loader: "style!css?sourceMap!postcss" },
     ].concat(config.module.loaders),
   },
 
