@@ -7,4 +7,8 @@ function pokemon(text) {
     .join("");
 };
 
+function foo() {
+  return Math.rand();
+}
+
 export default pokemon;

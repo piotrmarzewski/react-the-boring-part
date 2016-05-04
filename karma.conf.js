@@ -3,8 +3,8 @@
 var webpackConfig = require("./webpack/webpack.prod.config.js");
 webpackConfig.devtool = "inline-source-map";
 webpackConfig.module.loaders = [
-  { test: /\.js$/, exclude: [/node_modules/, /\.spec.js$/], loader: "babel-istanbul" },
   ...webpackConfig.module.loaders,
+  { test: /\.js$/, exclude: [/node_modules/, /\.spec.js$/], loader: "babel-istanbul" },
 ];
 
 module.exports = function(config) {
