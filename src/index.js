@@ -1,5 +1,5 @@
 import cls from "./style.css";
-import pokemon from "./lib/pokemon";
+import pokemon from "src/lib/pokemon";
 
 const $root = document.querySelector("#root");
 $root.classList.add(cls.purple);
