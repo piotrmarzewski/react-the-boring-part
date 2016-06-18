@@ -7,6 +7,9 @@ webpackConfig.module.loaders = [
   { test: /\.js$/, exclude: [/node_modules/, /\.spec.js$/], loader: "babel-istanbul" },
 ];
 
+const specFiles = "src/**/*.spec.js";
+const srcFiles = "src/**/*!(spec).js";
+
 module.exports = function(config) {
   config.set({
 
@@ -21,7 +24,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      "src/**/*.spec.js"
+      specFiles,
     ],
 
 
@@ -33,7 +36,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      "src/**/*.spec.js": ["webpack", "sourcemap"]
+      [specFiles]: ["webpack", "sourcemap"],
+      [srcFiles]: ["webpack", "sourcemap"],
     },
 
 
@@ -80,16 +84,16 @@ module.exports = function(config) {
 
     // Webpack middleware configuration
     webpackMiddleware: {
-      noInfo: true
+      noInfo: true,
     },
 
     // karma-notify-reporter settings
     notifyReporter: {
-      reportEachFailure: true
+      reportEachFailure: true,
     },
 
     coverageReporter: {
-      type: "text"
-    }
-  })
-}
+      type: "text",
+    },
+  });
+};

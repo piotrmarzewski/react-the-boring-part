@@ -15,7 +15,7 @@ var config = {
   resolve: {
     extensions: ["", ".js", ".jsx"],
     alias: {
-      "src": path.resolve("src"),
+      src: path.resolve(__dirname, "../src"),
     },
   },
 
