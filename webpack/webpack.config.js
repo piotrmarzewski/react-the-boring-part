@@ -8,7 +8,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
   entry: [
-    path.resolve("src/index.jsx"),
+    path.resolve("src/index.tsx"),
   ],
 
   output: {
@@ -18,7 +18,7 @@ const config = {
   },
 
   resolve: {
-    extensions: ["", ".js", ".jsx"],
+    extensions: ["", ".webpack.js", ".web.js", ".js", ".ts", ".tsx"],
     alias: {
       src: path.resolve(__dirname, "../src"),
     },
@@ -34,7 +34,7 @@ const config = {
 
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel" },
+      { test: /\.tsx?$/, exclude: /node_modules/, loader: "babel!ts" },
     ],
   },
 

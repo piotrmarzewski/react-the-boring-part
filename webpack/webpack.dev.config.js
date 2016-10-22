@@ -19,7 +19,7 @@ const devConfig = {
 
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: "react-hot" },
+      { test: /\.tsx?$/, exclude: /node_modules/, loader: "react-hot" },
       { test: /\.css$/,
         loaders: [
           "style",
